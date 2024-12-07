@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Price Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Car Price Prediction</h1>
+        <form action="/predict" method="post">
+            <div class="form-group">
+                <label for="car_brand">Car Brand:</label>
+                <select id="car_brand" name="car_brand" required>
+                    <option value="">Select a Car Brand</option>
+                    <option value="Mercedes-Benz">Mercedes-Benz</option>
+                    <option value="BMW">BMW</option>
+                    <option value="Audi">Audi</option>
+                    <option value="Toyota">Toyota</option>
+                    <option value="Volkswagen">Volkswagen</option>
+                    <option value="Porsche">Porsche</option>
+                    <option value="Volvo">Volvo</option>
+                    <option value="Jaguar">Jaguar</option>
+                    <option value="Land">Land</option>
+                    <option value="Ford">Ford</option>
+                    <option value="Honda">Honda</option>
+                    <option value="Chevrolet">Chevrolet</option>
+                    <option value="Hyundai">Hyundai</option>
+                    <option value="Kia">Kia</option>
+                    <option value="Nissan">Nissan</option>
+                    <option value="Renault">Renault</option>
+                    <option value="Skoda">Skoda</option>
+                    <option value="MINI">MINI</option>
+                    <option value="MG">MG</option>
+                    <option value="Mahindra">Mahindra</option>
+                    <option value="Tata">Tata</option>
+                    <option value="Isuzu">Isuzu</option>
+                    <option value="Jeep">Jeep</option>
+                    <option value="Datsun">Datsun</option>
+                    <option value="Fiat">Fiat</option>
+                    <option value="Citroen">Citroen</option>
+                    <option value="Bentley">Bentley</option>
+                    <option value="Maruti">Maruti</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="kms_driven">KMs Driven:</label>
+                <input type="number" id="kms_driven" name="kms_driven" required>
+            </div>
+            <div class="form-group">
+                <label for="fuel_type">Fuel Type:</label>
+                <select id="fuel_type" name="fuel_type" required>
+                    <option value="">Select Fuel Type</option>
+                    <option value="Petrol">Petrol</option>
+                    <option value="Diesel">Diesel</option>
+                    <option value="CNG">CNG</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="age">Age of Car (years):</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+            <button type="submit" class="btn">Predict Price</button>
+        </form>
+    </div>
+</body>
+</html>
